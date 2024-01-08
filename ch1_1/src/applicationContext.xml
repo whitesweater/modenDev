@@ -5,4 +5,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- 将指定类TestDaoImpl配置给Spring，让Spring创建其实例 -->
 	<bean id="test" class="dao.TestDaoImpl2" />
+	<bean id="test" class="dao.TestDaoImpl2024"/>
+
 </beans>
