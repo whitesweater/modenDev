@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LogTestController {
-	private Log log = LogFactory.getLog(LogTestController.class);
+	private Log log = LogFactory.getLog1(LogTestController.class);
 	@RequestMapping("/testLog")
 	public String testLog() {
 		log.info("测试日志");

@@ -30,6 +30,18 @@ public class MyAspect {
     private void myPointCut() {
     }
 
+
+    @Pointcut("execution(* aspectj.dao.*.delete(..))")
+    private void deletePointCut() {
+    }
+
+
+    @Before("deletePointCut()")
+    public void beforeDelete(JoinPoint jp) {
+        // 在这里编写只针对 delete 方法的前置逻辑
+        System.out.print("前置通知：模拟权限控制, 只针对delete方法");
+    }
+
     /**
      * 前置通知，使用Joinpoint接口作为参数获得目标对象信息
      */
